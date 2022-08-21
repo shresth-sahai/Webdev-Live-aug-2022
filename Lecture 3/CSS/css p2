@@ -53,6 +53,25 @@ span{
     line-height: 21px;
 }
 
+.detel a{
+    background: blueviolet;
+    padding: 10px 18 px;
+    text-decoration: none;
+    font-weight: bold;
+    color: cadetblue;
+    display: inline-block;
+    border-radius: 5 px;
+}
+
+.images{
+    width: 45%;
+    height:80%;
+    position: relative;
+    bottom:0;
+    right:100px;
+
+}
+
 .social a:hover{
 color: aqua;
 }
