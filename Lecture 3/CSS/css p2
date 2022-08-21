@@ -1,78 +1,115 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 }
-.hero{
+
+.hero {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #EEF4FD;
+    background: #eff4fd;
+    position: relative;
 }
-nav{
+
+nav {
     display: flex;
-    width: auto;
+    width: 84%;
     margin: auto;
+    padding: 20px 0;
     align-items: center;
     justify-content: space-between;
 }
-.logo{
-width: 100px;
-cursor: pointer;
+
+.logo {
+    width: 100px;
+    cursor: pointer;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10 px 20 px;
-
+    margin: 10px 20px;
 }
-nav ul li a{
-    color: black;
-    font-weight: bold;
+
+nav ul li a {
     text-decoration: none;
-}
-nav ul li a:hover{
-    color: chocolate;
+    color: #000;
+    font-weight: bold;
 }
 
-.detel{
-    margin-left: 7%;
-    margin-top: 15%;
-    
+nav ul li a:hover {
+    color: red;
 }
-.detel h1{
+
+.detel {
+    margin-left: 8%;
+    margin-top: 15%;
+}
+
+.detel h1 {
     font-size: 50px;
-    color:darkgreen;
+    color: #212121;
     margin-bottom: 20px;
 }
-span{
-    color: darkorange;
-}
-.detel p{
-    color: teal;
-    line-height: 21px;
+
+span {
+    color: orange;
+
 }
 
-.detel a{
-    background: blueviolet;
-    padding: 10px 18 px;
+.detel p {
+    color: #555;
+    line-height: 22px;
+}
+
+.detel a {
+    background: #212121;
+    padding: 10px 18px;
     text-decoration: none;
     font-weight: bold;
-    color: cadetblue;
+    color: #fff;
     display: inline-block;
-    border-radius: 5 px;
+    margin: 30px 0;
+    border-radius: 5px;
 }
 
-.images{
+.images {
     width: 45%;
-    height:80%;
-    position: relative;
-    bottom:0;
-    right:100px;
-
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
 }
 
-.social a:hover{
-color: aqua;
+.images img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
 }
 
+.images:hover .shape {
+    bottom: 40px;
+}
+
+.images:hover .girl {
+    left: 45%;
+}
+
+.social {
+    margin-left: 8%;
+    margin-top: 100px;
+}
+
+.social a {
+    font-size: 30px;
+    color: #212121;
+    margin-right: 20px;
+}
+
+.social a:hover {
+    color: orange;
+}
