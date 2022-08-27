@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> HELLO JS!</title>
+</head>
+<body>
+	<button  onclick="alert('WELCOME')">
+			Click Me
+	</button>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> HELLO JS!</title>
+</head>
+<body>
+	<p id="para">
+		Hi User
+	</p>
+	<button id="change"> change text </button>
+	<script>
+		document.getElementById("change").onclick=function()
+		{
+document.getElementById("change").innerHTML="WELCOME";
+		}
+	</script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> HELLO JS!</title>
+	<style>
+		.circle{
+			height: 111px;
+			width: 111px;
+			border-bottom: 50%;
+			float:left;
+		}
+		#red{
+			background-color: red;
+		}
+		#blue{
+			background-color: blue;
+		}
+		#green{
+			background-color: aquamarine;
+		}
+	</style>
+</head>
+<body>
+
+<div class="circle" id="red"></div>
+<div class="circle" id="blue"></div>
+<div class="circle" id="green"></div>
+<script>
+document.getElementById("red").onclick=function()
+{
+	document.getElementById("red").style.display="none";
+}
+	document.getElementById("blue").onclick = function () {
+		document.getElementById("blue").style.display = "none";
+	}
+	document.getElementById("green").onclick = function () {
+			document.getElementById("green").style.display = "none";
+		}
+</script>
+	
+</body>
+</html>
+
+
