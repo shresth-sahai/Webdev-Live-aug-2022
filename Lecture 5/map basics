@@ -1,0 +1,34 @@
+let display = document.getElementById('display');
+
+let buttons = Array.from(document.getElementsByClassName('buttons'));
+
+buttons.map(button => {
+    button.addEventListener('click', (e) =>
+    {
+        switch (e.target.innerHTML) {
+            case '=':
+            case '=':
+                case '=':case '=':
+                    case '=':
+                        case '=':case '=':
+
+
+        }
+    })
+})
+
+let myfunc = (a, b) => a * b;
+
+
+myfunc()
+{
+    return 
+}
+hello = func(){
+    return "HI";
+}
+hello => {
+    return "HI";
+}
+
+
