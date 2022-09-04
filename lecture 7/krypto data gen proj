@@ -53,21 +53,24 @@ var apiKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 var apiUrl = `${proxyUrl}${baseUrl}`;
 console.log(apiUrl);
 
-fetch(`${proxyUrl}${baseUrl}`, 
-)
+fetch(`${proxyUrl}${baseUrl}`, { 
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-My-Custom-Header': `${apiKey}`,
+      'Access-Control-Allow-Origin': "*"
+    }
+})
   .then((response) => {
-    if (response.status=="success") {
+    if (response.ok) {
       response.json().then((json) => {
-      
+        console.log(json.data);
         let coinsData = json.data.coins;
 
         if (coinsData.length > 0) {
           var cryptoCoin = "";
         }
         //For Loop Starts
-        /*  for (int coin:coinsData){
-            
-          }*/
         coinsData.forEach((coin) => {
           cryptoCoin += "<tr>";
           cryptoCoin += `<td> ${coin.uuid} </td>`;
