@@ -51,3 +51,48 @@ function disappearParent(e) {
     section.style.filter = "blur(0px)"
   }
 }
+
+
+
+
+
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  background:rgba(19,19,23,0.9);
+}
+section{
+  background-image:url("modal-background");
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:100vh;
+  width:100%;
+}
+.center{
+  color:white;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  align-items:center;
+}
+h1{
+  text-align:center;
+  font-size:50px;
+  font-family: "Gill Sans Extrabold", sans-serif;
+  margin:40px;
+  text-transform:capitalize;
+}
+button{
+  height:60px;
+  width:500px;
+  background:#5454ff;
+  border:none;
+  border-radius:7px;
+  font-size:25px;
+  color:#000;
+  cursor:pointer;
+}
