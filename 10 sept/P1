@@ -1,30 +1,153 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Creating a Pop up Window (modal)</title>
     <link rel="stylesheet" href="pop.css">
     <link rel="stylesheet" href="pop2.css">
-  </head>
-  <body>
+</head>
+
+<body>
+
 
     <section>
-      <div class="center">
-        <h1>click the button below to pop up a Window!</h1>
-        <button type="button">Click for modal</button>
-      </div>
+        <div class="center">
+            <h1>click the button below to pop up a Window!</h1>
+            <button type="button">Click for modal</button>
+        </div>
     </section>
 
     <div class="modal-parent">
-      <div class="modal">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ulorem lomre t labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-        <span class="X" draggable="true">&times;</span>
-      </div>
+        <div class="modal">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ulorem lomre t labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <span class="X" draggable="true">&times;</span>
+        </div>
     </div>
 
+
     <script src="pop.js" charset="utf-8"></script>
-  </body>
+</body>
+
 </html>
+
+
+
+pop.css
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(19, 19, 23, 0.9);
+}
+
+section {
+    background-image: url("modal-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.center {
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    margin: 40px;
+    text-transform: capitalize;
+}
+
+button {
+    margin: 0 auto;
+    height: 60px;
+    width: 500px;
+    background: #5454ff;
+    border: none;
+    border-radius: 6px;
+    font-size: 25px;
+    color: #000;
+    cursor: pointer;
+}
+
+
+
+pop2 .css
+
+
+
+.modal-parent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+.modal {
+    background: white;
+    width: 70%;
+    padding: 30px;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-family: arial;
+    position: relative;
+    animation: 0.5s drop;
+}
+
+@keyframes drop {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+.X {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    font-size: 40px;
+    cursor: pointer;
+
+}
+
+section {
+    transition: 2s;
+}
+
+
+
+
+
+js
 
 
 
@@ -56,86 +179,7 @@ function disappearParent(e) {
 
 
 
-*{
-  margin:0;
-  padding:0;
-}
-body{
-  background:rgba(19,19,23,0.9);
-}
-section{
-  background-image:url("modal-background");
-  background-position:center;
-  background-repeat:no-repeat;
-  background-size:cover;
-  height:100vh;
-  width:100%;
-}
-.center{
-  color:white;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  flex-direction:column;
-  align-items:center;
-}
-h1{
-  text-align:center;
-  font-size:50px;
-  font-family: "Gill Sans Extrabold", sans-serif;
-  margin:40px;
-  text-transform:capitalize;
-}
-button{
-  height:60px;
-  width:500px;
-  background:#5454ff;
-  border:none;
-  border-radius:7px;
-  font-size:25px;
-  color:#000;
-  cursor:pointer;
-}
 
 
-.modal-parent{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  display: none;
-}
-.modal{
-  background: white;
-  width: 70%;
-  padding: 30px;
-  border-radius: 6px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 22px;
-  font-family: arial;
-  position: relative;
-  animation: 0.5s drop;
-}
-@keyframes drop {
-  0%{
-    top: -100px;
-  }
-  100%{
-    top: 50%;
-  }
-}
-.X{
-  position: absolute;
-  right: 20px;
-  top: 5px;
-  font-size: 40px;
-  cursor: pointer;
 
-}
-section{
-  transition: 2s;
-}
+
