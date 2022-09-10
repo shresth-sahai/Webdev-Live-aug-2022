@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <div id="container">
+        <h3>Todo list </h3>
+        <input type="text" placeholder="Add New">
+        <ul>
+            <li>  Hi i m the Batman> <span><i class="fa fa-trash"> </i></span></li>
+            <li> Save Gotham <span><i class="fa fa-trash"> </i></span></li>
+            <li> BatMobile <span><i class="fa fa-trash"> </i></span></li>
+            <li> Joker <span><i class="fa fa-trash"> </i></span></li>
+
+        </ul>
+
+
+    </div>
+    
+</body>
+</html>
