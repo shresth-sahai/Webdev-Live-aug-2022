@@ -1,0 +1,18 @@
+// Ajax
+function onload() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("par").innerHTML = "HI world";
+        }
+    };
+    xhttp.open("GET", "ajax_info");
+    xhttp.send();
+}
+
+// 0-->req is not initialized 1--> server connection made 2 --> req rec. 3-- processing req
+//4 request finished res is ready 
+
+
+
+
