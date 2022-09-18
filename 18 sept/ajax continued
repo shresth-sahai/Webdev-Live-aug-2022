@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<style>
+    div{
+        background-color: bisque;
+    }
+</style>
+<body>
+
+     <input type="number" id="myText">
+
+    <p>Click the button to change the value of the text field.</p>
+
+    <button id ="fact" >Try it</button>
+
+    <div class="container" id="factText" >
+
+    </div>
+
+    <script>
+    
+        
+             myText.addEventListener('input', generateExcuseById);
+
+            function generateExcuseById() {
+              
+                let input=document.getElementById('myText').value;
+
+                let btn = document.getElementById('fact');
+                let display2 = document.getElementById('factText')
+               
+             
+          
+                let ajax = new XMLHttpRequest();
+
+                if (input !== '') {
+                    ajax.open('GET', 'https://excuser.herokuapp.com/v1/excuse/id/'+ input , true);
+
+                    ajax.onload = function () {
+                        if (this.status === 200) {
+                            console.log(this.responseText);
+                            let data = JSON.parse(this.responseText);
+                            display2.innerText = `${data.excuse}`;
+                        }
+                        else {
+                            this.onerror2 = this.onerror2();
+                        }
+                    }
+                }
+                ajax.send();
+            }
+
+            function onerror2() {
+                display2.innerHTML = "Error!!!";
+            }
+    </script>
+
+</body>
+
+</html>
