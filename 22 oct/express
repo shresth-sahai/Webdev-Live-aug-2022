@@ -1,0 +1,60 @@
+// REPL--- > interactive node shell
+// read evaluate print loop 
+// package.json---> desciption abtthe app 
+// packages---> npm
+//import superheroes from 'superhero';
+//console.log(3 + 3);
+//console.log("HI world");
+// cmd--- node app.js---> file run 
+//const superheroes = require('superheroes'); 
+//console.log(superheroes.random());
+
+//http ---module --- created server
+/*var http = require('http');
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text' });
+    res.write("Server Started");
+}).listen(8081);
+//
+*/
+/*var fs = require('fs');
+fs.rename('myrename.txt', 'mytext.txt', function (err) {
+    if (err) throw err;
+    console.log('File renamed');
+})
+*/
+const express = require('express');
+const app = express();
+const port = 3000;
+const bodyparser = require('body-parser');
+//get measn get some data
+//post means modification
+app.use(express.urlencoded({ extended: true }));
+app.post('/', (req, res) => {
+    res.sendFile(__dirname + "/index.html");
+})
+app.get('/', (req, res) => {
+    var n1 = Number(req.body.num1);
+    var n2 = Number(req.body.num2);
+    var res = n1 + n2;
+    console.log(res);
+})
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+});
+const express = require('express');
+const app = express();
+const port = 3000;
+const bodyparser = require('body-parser');
+//get measn get some data
+//post means modification
+app.use(express.urlencoded({ extended: true }));
+app.post('/', (req, res) => {
+    res.sendFile(__dirname + "/index2.html");
+})
+app.get("/", (req,res)=>{
+    var n1 = req.body.num1;
+     var n2 = req.body.num2;
+    var res = n1 + n2;
+    console.log(res);
+})
