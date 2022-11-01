@@ -1,0 +1,34 @@
+const express = require('express');
+
+//const bodyParser = require('body-parser');
+var app = express();
+app.set("view engine", "ejs");
+
+
+var daytext = "";
+app.get("/", function (req, res) {
+    var d = new Date();
+    var day = d.getDay();
+    if (day == 0 || day == 6)
+        daytext = "weekend";
+    else
+        daytext = "weekday";
+    res.render("list", { dayj: daytext });
+})
+
+app.listen(3000, function () {
+    console.log("server started");
+})
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS </title>
+</head>
+<body>
+    <h2> Today is <%= dayj %> </h2>
+</body>
+</html>
